@@ -25,9 +25,7 @@ def default_ruby_system_packages
     pkgs  = %w[ openssl libreadline6 libreadline6-dev
                 zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev
                 sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev
-                ncurses-dev automake libtool bison ssl-cert daemons
-                autotest base62 bson bson_ext colored json logger
-                macaddr mocha mongo net-ssh require_all syntax uuid
+                ncurses-dev automake libtool bison ssl-cert 
               ]
     case node['platform_version']
     when '10.04' then %w[ ruby ruby-dev libopenssl-ruby1.8 ] + pkgs

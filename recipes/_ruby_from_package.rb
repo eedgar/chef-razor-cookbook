@@ -28,4 +28,9 @@ end
 
 include_recipe "razor::_rubygems_from_source" if lucid?
 
-gem_package "bundler"
+gems =  %w[ bundler rake mongo pg bson bson_ext syntax uuid logger
+            json colored net-ssh require_all base62 daemons ]
+
+gems.each do |gem|
+    gem_package gem
+end
